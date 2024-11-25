@@ -5,12 +5,17 @@ import Input from "@/components/Input";
 import LoginButton from "@/components/button/LoginButton";
 import Link from "next/link";
 import useInput from "@/hooks/useInput";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
   const { value: id, onChange: onChangeId } = useInput();
   const { value: password, onChange: onChangePassword } = useInput();
 
-  const onSubmit = () => {};
+  const navigate = useRouter();
+
+  const onSubmit = () => {
+    navigate.push("/friends");
+  };
 
   return (
     <section className="main_page_wrapper">
