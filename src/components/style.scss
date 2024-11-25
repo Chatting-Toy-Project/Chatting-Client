@@ -60,16 +60,30 @@
 }
 .login_button {
   width: 100%;
-
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #6375ff;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   &:hover {
-    background-color: #fbfbfb;
+    background-color: #4f61ff;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      background-color: #4f61ff;
+    }
+  }
+
+  &.secondary {
+    background-color: #fff;
+    color: #333;
+    &:hover {
+      background-color: #fbfbfb;
+    }
   }
 }

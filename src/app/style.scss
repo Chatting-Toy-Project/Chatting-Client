@@ -1,0 +1,13 @@
+.main_page_wrapper {
+  background: linear-gradient(320deg, #ff9e62, #f88b0f);
+  width: 100%;
+  padding-top: 60px;
+
+  .form_wrap {
+    background-color: rgba(255, 255, 255, 0.584);
+    margin: 0 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
