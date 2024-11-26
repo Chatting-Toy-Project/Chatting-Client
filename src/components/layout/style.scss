@@ -6,11 +6,8 @@
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding: 20px;
-  .friend_list_title {
-    font-size: 1.2rem;
-    margin: 40px 10px;
-  }
   overflow-y: auto;
+  position: relative;
 }
 
 .header_layout {
@@ -41,6 +38,39 @@
     width: 40px;
     img:hover {
       filter: invert(0.3);
+    }
+  }
+}
+
+.footer_layout {
+  height: 40px;
+  background-color: rgba(239, 239, 239, 0.595);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+
+    background-color: #77c3f6;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #565a7d;
+    }
+    &.active {
+      background-color: #818efc;
     }
   }
 }

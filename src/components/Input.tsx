@@ -3,10 +3,10 @@ import React from "react";
 import "./style.scss";
 
 interface Props {
-  label: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
+  label?: string;
   type?: string;
 }
 
@@ -19,7 +19,7 @@ const Input = ({
 }: Props) => {
   return (
     <div className="input_wrap">
-      <label>{label}</label>
+      {label && <label>{label}</label>}
       <input
         type={type}
         value={value}
