@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import React from "react";
 
 const Footer = () => {
+  const pathname = usePathname();
+
   const checkActive = (path: string) => {
-    const location = window.location.pathname;
-    return location === path ? "active" : "";
+    return pathname === path ? "active" : "";
   };
   return (
     <div className="footer_layout">

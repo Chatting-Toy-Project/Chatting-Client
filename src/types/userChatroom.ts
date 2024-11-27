@@ -1,5 +1,7 @@
 export interface UserChatroom {
   userChatroomId: string;
-  userId: string;
   chatroomId: string;
+  userId: string;
+  userName: string;
+  lastMessage: string;
 }

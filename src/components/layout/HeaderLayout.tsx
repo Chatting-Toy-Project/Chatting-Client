@@ -7,7 +7,7 @@ const HeaderLayout = ({
   children,
   backButton = false,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   backButton: boolean;
 }) => {
   const router = useRouter();

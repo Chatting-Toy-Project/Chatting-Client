@@ -1,13 +1,30 @@
 .mobile_layout {
-  height: calc(100vh - 100px);
   background-color: rgb(255, 255, 255);
-  width: 90%;
   margin: auto;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding: 20px;
-  overflow-y: auto;
   position: relative;
+  width: 90%;
+  overflow: hidden;
+  // scrollbar
+
+  .mobile_content {
+    padding: 20px;
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #c4c4c4;
+      border-radius: 10px;
+    }
+  }
+  &.no_footer {
+    .mobile_content {
+      height: calc(100vh - 100px);
+    }
+  }
 }
 
 .header_layout {
@@ -45,8 +62,8 @@
 .footer_layout {
   height: 40px;
   background-color: rgba(239, 239, 239, 0.595);
-  position: absolute;
-  bottom: 0;
+  position: sticky;
+  bottom: 0px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -60,17 +77,16 @@
     height: 100%;
     flex: 1;
 
-    background-color: #77c3f6;
+    background-color: #abdaf9;
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 500;
-    text-decoration: none;
     cursor: pointer;
     &:hover {
-      background-color: #565a7d;
+      background-color: #c2c2c3;
     }
     &.active {
-      background-color: #818efc;
+      background-color: #4a74f2;
     }
   }
 }
