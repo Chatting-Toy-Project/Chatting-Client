@@ -1,56 +1,27 @@
-"use client";
-import TitleHeader from "@/components/TitleHeader";
-import "./style.scss";
-import Input from "@/components/Input";
 import LoginButton from "@/components/button/LoginButton";
+import LoginLayout from "@/styles/layout/login/LoginLayout";
+import Logo from "@/styles/layout/Logo";
 import Link from "next/link";
-import useInput from "@/hooks/useInput";
-import { useRouter } from "next/navigation";
+import React from "react";
 
-const Home = () => {
-  const { value: id, onChange: onChangeId } = useInput();
-  const { value: password, onChange: onChangePassword } = useInput();
-
-  const navigate = useRouter();
-
-  const onSubmit = () => {
-    navigate.push("/friends");
-  };
-
+const MainPage = () => {
   return (
-    <section className="main_page_wrapper">
-      <TitleHeader>
-        <p>No.1 채팅 어플리케이션</p>
-        <p>챗블리에 오신것을 환영합니다!</p>
-      </TitleHeader>
-      <div className="form_wrap">
-        <Input
-          label="아이디"
-          placeholder="아이디"
-          value={id}
-          onChange={onChangeId}
-        />
-        <Input
-          label="비밀번호"
-          placeholder="비밀번호"
-          type="password"
-          value={password}
-          onChange={onChangePassword}
-        />
-
-        <div className="mt-1">
-          <LoginButton color="primary" onClick={onSubmit}>
-            로그인
-          </LoginButton>
+    <section className="main_page_component">
+      <LoginLayout>
+        <div className="logo_area">
+          <Logo />
+          친구들과 소통하고 즐겁게 대화하세요.
+          <br />
+          <strong>챗블리와 함께 지금 시작하기</strong>
         </div>
-        <div className="mt-1">
+        <div className="start_button_area">
           <LoginButton color="secondary">
-            <Link href="/join">회원가입</Link>
+            <Link href={"/login"}>시작하기</Link>
           </LoginButton>
         </div>
-      </div>
+      </LoginLayout>
     </section>
   );
 };
 
-export default Home;
+export default MainPage;

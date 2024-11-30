@@ -1,0 +1,66 @@
+.login_layout {
+  background: linear-gradient(320deg, #f7d8aa, #ffdeae);
+  .logo_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    strong {
+      font-weight: 700;
+    }
+  }
+  .logo_area.small {
+    height: 30vh;
+  }
+}
+
+.main_page_component {
+  background: linear-gradient(320deg, #f7d8aa, #ffdeae);
+  width: 100%;
+  position: relative;
+  .start_button_area {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 100px;
+
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.login_page_comonent {
+  .button_area {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .go_join_area {
+    border-top: 1px solid #ddbe8d;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #969696;
+    cursor: pointer;
+    a {
+      color: #8aa8fb;
+    }
+  }
+}
+.login_email_page_component {
+  padding: 20px;
+  .form_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
