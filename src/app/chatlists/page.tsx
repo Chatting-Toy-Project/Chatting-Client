@@ -1,9 +1,7 @@
 import HeaderLayout from "@/components/layout/HeaderLayout";
 import MobileLayout from "@/components/layout/MobileLayout";
-import ModalProvider from "@/components/modal/ModalProvider";
 import React from "react";
 
-import "./style.scss";
 import { UserChatroom } from "@/types/userChatroom";
 import { userChatlists } from "./dummy";
 import UserProfile from "@/components/card/UserProfile";
@@ -12,7 +10,7 @@ import Link from "next/link";
 const ChatListPage = () => {
   const chatList: UserChatroom[] = userChatlists;
   return (
-    <section>
+    <section className="chatlist_page_component">
       <HeaderLayout backButton={true}></HeaderLayout>
       <MobileLayout>
         <div className="chatlist_title">채팅 목록</div>

@@ -22,6 +22,7 @@ const LoginPage = () => {
         <div className="go_join_area">
           아직 회원이 아니신가요? <Link href="/join">회원가입</Link>
         </div>
+        <div onClick={() => {}}>로그아웃</div>
       </div>
     </LoginLayout>
   );

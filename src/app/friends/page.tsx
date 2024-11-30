@@ -1,7 +1,6 @@
 "use client";
 import MobileLayout from "@/components/layout/MobileLayout";
 import { friendsDummy } from "./dummy";
-import "./style.scss";
 import FriendCard from "@/components/card/FriendCard";
 import HeaderLayout from "@/components/layout/HeaderLayout";
 import { useModalStore } from "@/store/modal";
@@ -30,7 +29,7 @@ const FriendsPage = () => {
   };
 
   return (
-    <section className="friend_page_wrapper">
+    <section className="friend_page_component">
       <HeaderLayout backButton={true}>
         <button onClick={onClickAdd} className="right_button">
           친구 추가

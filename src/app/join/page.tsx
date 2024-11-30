@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import "./style.scss";
 import BackButtonNavbar from "@/components/navbar/BackButtonNavbar";
 import Input from "@/components/Input";
 import useInput from "@/hooks/useInput";
