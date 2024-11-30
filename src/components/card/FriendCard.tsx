@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import UserProfile from "./UserProfile";
 import { User } from "@/types/user";
 import "../style.scss";
-import { randomColor } from "./randomColor";
 
 // button onClick
 interface FriendCardProps {

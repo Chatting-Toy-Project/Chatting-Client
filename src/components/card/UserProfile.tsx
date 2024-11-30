@@ -1,5 +1,4 @@
 import "../style.scss";
-import { randomColor } from "./randomColor";
 const UserProfile = ({
   name,
   size = "medium",
@@ -8,17 +7,7 @@ const UserProfile = ({
 
   size?: "small" | "medium";
 }) => {
-  return (
-    <div
-      className={`user_profile_${size}`}
-      style={{
-        backgroundColor: randomColor().bgColor,
-        color: randomColor().fontColor,
-      }}
-    >
-      {name[0].toUpperCase()}
-    </div>
-  );
+  return <div className={`user_profile_${size}`}>{name[0].toUpperCase()}</div>;
 };
 
 export default UserProfile;
