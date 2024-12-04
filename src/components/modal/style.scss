@@ -1,5 +1,5 @@
 .modal_layout {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 0px;
@@ -52,6 +52,9 @@
   // 닫히는 애니메이션
   &.close {
     animation: closeModal 0.5s ease forwards;
+    .drag_handle {
+      display: none;
+    }
   }
 
   @keyframes openModal {
@@ -72,8 +75,7 @@
     }
     100% {
       height: 0px;
-      z-index: -1;
-      opacity: 1;
+      opacity: 0;
     }
   }
 }

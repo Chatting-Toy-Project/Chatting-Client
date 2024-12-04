@@ -51,7 +51,9 @@ const JoinPage = () => {
           />
 
           <div className="mt-3">
-            <LoginButton onClick={() => {}}>회원가입</LoginButton>
+            <LoginButton color="secondary" onClick={() => {}}>
+              회원가입
+            </LoginButton>
           </div>
         </div>
       </div>

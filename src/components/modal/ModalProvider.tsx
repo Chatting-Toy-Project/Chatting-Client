@@ -4,12 +4,10 @@ import React from "react";
 import "./style.scss";
 
 const ModalProvider = ({ children }: { children: React.ReactNode }) => {
-  const { isOpen, closeModal } = useModalStore((state) => state);
-
-  const className = isOpen ? "modal_layout open" : "modal_layout close";
+  const { modalState, closeModal } = useModalStore((state) => state);
 
   return (
-    <div className={className}>
+    <div className={`modal_layout ${modalState}`}>
       <div onClick={closeModal} className="close_btn">
         𝘅
       </div>
